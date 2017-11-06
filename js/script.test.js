@@ -9,7 +9,19 @@ test('inserts into arrray', () => {
 
         m.insert(1);
 
-        expect(m.arrays).toBe([0,0,0,0,0,0,1])
+        expect(m.arrays).toEqual([1,0,0,0,0,0,0])
+
+
+
+});
+
+test('inserts into arrray', () => {
+
+    m.insert(1);
+    m.insert(1);
+    m.insert(3);
+
+    expect(m.arrays).toEqual([[1,1,0,0,0,0,0],0,[1,0,0,0,0,0,0],0,0,0,0])
 
 
 
